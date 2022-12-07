@@ -1,3 +1,3 @@
 # Motion exploration app, built in React
-
-## uses Greensock (GSAP)
+## * runs on Vite
+## * uses Greensock (GSAP)
