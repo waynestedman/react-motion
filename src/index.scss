@@ -32,6 +32,7 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
+  text-align: center;
 }
 
 h1,
@@ -67,6 +68,11 @@ button {
   :focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
+}
+
+.navitem {
+  padding: 0.5rem;
+  color: #404040;
 }
 
 @media (prefers-color-scheme: light) {

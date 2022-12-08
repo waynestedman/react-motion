@@ -11,7 +11,8 @@ function AppHeader() {
         justifyContent: 'space-between', 
         alignItems: 'center',
         padding: '0.5rem 2rem',
-        backgroundColor: '#EA444E',
+        backgroundColor: 'blue',
+        width: '100vw'
       }}>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Motion in React
