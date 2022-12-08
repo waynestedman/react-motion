@@ -1,14 +1,18 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+
 import App from './App'
-import './index.css'
+import './index.scss'
 
 const container = document.getElementById('approot');
 const root = createRoot(container);
 
 const AppWrapper = () => {
   return (
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   );
 };
 
