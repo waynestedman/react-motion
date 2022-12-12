@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import theme from './theme/theme.js';
 
 import AppHeader from  './AppHeader.jsx';
-import Home from './Home.jsx';
+// import Home from './Home.jsx';
 import CssMotion from './CssMotion.jsx';
 import GsapMotion from './GsapMotion.jsx';
 
@@ -16,8 +16,9 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <AppHeader />
+        <CssMotion />
         <Routes>
-          <Route path="/" element={ <Home />} />
+          {/* <Route path="/" element={ <Home />} /> */}
           <Route path="/css" element={ <CssMotion />} />
           <Route path="/gsap" element={ <GsapMotion />} />
         </Routes>
