@@ -18,7 +18,7 @@ const theme = createTheme({
   }, // palette
   typography: {
     fontFamily: 'var(--montserrat)',
-    fontSize: 'var(--p)',
+    fontSize: 16,
     color: tokens.success,
     h1: {
       fontFamily: 'var(--raleway)',

@@ -25,19 +25,19 @@ button {
   border: 10px solid var(--button-color, green);
   border-radius: var(--radius01);
 
-  .hamburger {
-    fill: var(--button-color);
-    stroke: var(--button-color);
-  }
+  // .hamburger {
+  //   fill: var(--button-color);
+  //   stroke: var(--button-color);
+  // }
 }
 
 /* button #1 */
 .button1 {
   --button-color: var(--gray03);
 
-  .hamburger {
-    stroke: none;
-  }
+  // .hamburger {
+  //   stroke: none;
+  // }
   .line {
     transition: 
       rotate 300ms ease-in-out,
@@ -46,24 +46,30 @@ button {
     ;
     transform-origin: center;
   }
+}
 
-  &:hover .line {
+.button1[aria-expanded="true"] {
+  .line {
     transition: 
     y 300ms ease-in-out,
     rotate 300ms ease-in-out 300ms,
     opacity 0ms 300ms;
     ;
   }
-  &:hover :is(.top, .bottom) {
+
+  :is(.top, .bottom) {
     y: 45;
   }
-  &:hover .top {
+  
+  .top {
     rotate: 45deg;
   }
-  &:hover .middle {
+  
+  .middle {
     opacity: 0;
   }
-  &:hover .bottom {
+  
+  .bottom {
     rotate: -45deg;
   }
 }
@@ -72,23 +78,32 @@ button {
 .button2 {
   --button-color: var(--indigo02);
 
-  .line {
-    // transition: stroke-dashoffset 1s;
-    animation: to-open-icon 1s forwards;
-  };
-
-  &:hover .line {
-    // stroke-dashoffset: 79.9;
-    animation: to-close-icon 1s forwards;
+  .hamburger {
+    transition: rotate 800ms 100ms;
   }
 
   .line.top {
     --rotation: -45deg;
     transform-origin: 65px 45px;
   }
+
   .line.bottom {
     --rotation: 45deg;
     transform-origin: 60px 55px;
+  }
+}
+
+.button2[data-state="closed"] :is(.top, .bottom) {
+  animation: to-open-icon 1s forwards;
+}
+
+.button2[data-state="opened"] {
+  &:is(.top, .bottom) {
+  animation: to-close-icon 1s forwards;
+  }
+
+  .hamburger {
+    rotate: 1turn;
   }
 }
 
@@ -109,4 +124,24 @@ button {
 /* button #3 */
 .button3 {
   --button-color: var(--teal01);
+  overflow:hidden;
+
+  .hamburger {
+    transition: translate 1s, rotate 1s;
+  }
+
+  .line {
+    transition: 1s;
+    stroke-dasharray: 60 31 60 300;
+  } 
+}
+
+.button3[aria-expanded="true"] .hamburger {
+  translate: 10px -10px;
+  rotate: 0.125turn;
+}
+
+.button3[aria-expanded="true"] .line {
+  stroke-dasharray: 60 105 60 300;
+  stroke-dashoffset: -90;
 }

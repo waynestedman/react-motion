@@ -6,8 +6,8 @@ import theme from './theme/theme.js';
 
 import AppHeader from  './AppHeader.jsx';
 // import Home from './Home.jsx';
-import CssMotion from './CssMotion.jsx';
-import GsapMotion from './GsapMotion.jsx';
+import CssExamples from './CssExamples.jsx';
+import GsapExamples from './GsapExamples.jsx';
 
 import './App.css';
 
@@ -16,11 +16,11 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <AppHeader />
-        <CssMotion />
+        <CssExamples />
         <Routes>
           {/* <Route path="/" element={ <Home />} /> */}
-          <Route path="/css" element={ <CssMotion />} />
-          <Route path="/gsap" element={ <GsapMotion />} />
+          <Route path="/css" element={ <CssExamples />} />
+          <Route path="/gsap" element={ <GsapExamples />} />
         </Routes>
       </ThemeProvider>
     </div>
