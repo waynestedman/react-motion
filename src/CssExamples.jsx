@@ -1,8 +1,23 @@
 import React from "react";
 
-import './CssButtons.js';
+function CssExamples() {
+  
+  function clickUpdate() {
+    const buttons = document.querySelectorAll("button");
 
-function CssExamples() { 
+    buttons.forEach((button) => {
+        const currentState = button.getAttribute("data-state");
+    
+        if (!currentState || currentState === "closed") {
+          button.setAttribute("data-state", "opened");
+          button.setAttribute("aria-expanded", "true");
+        } else {
+          button.setAttribute("data-state", "closed");
+          button.setAttribute("aria-expanded", "false");
+        }
+    });
+  };
+
   return (
     <div className="cssMotionExamples">
       <h1>CSS motion in React</h1>
@@ -10,7 +25,7 @@ function CssExamples() {
       <div className="examples">
         <div className="menuTrigger">
           <h2>Menu trigger example #1</h2>
-          <button className="button1" aria-controls="primary-navigation" aria-expanded="false">
+          <button onClick={clickUpdate} className="button1" aria-controls="primary-navigation" aria-expanded="false">
             <svg fill="var(--button-color)" className="hamburger" viewBox="0 0 100 100" width="200">
               <rect className="line top"
                 width="80" height="10"
