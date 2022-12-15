@@ -15,9 +15,9 @@ const bull = (
   </Box>
 );
 
-export default function BasicCard() {
+function SampleCard() {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card sx={{ minWidth: 275, maxWidth: 400 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Word of the Day
@@ -34,9 +34,11 @@ export default function BasicCard() {
           {'"a benevolent smile"'}
         </Typography>
       </CardContent>
-      {/* <CardActions>
+      <CardActions>
         <Button size="small">Learn More</Button>
-      </CardActions> */}
+      </CardActions>
     </Card>
   );
 }
+
+export default SampleCard

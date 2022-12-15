@@ -1,4 +1,18 @@
+.appHeader {
+  display: block;
+  // margin-bottom: 1rem;
+}
+
 header .navBar {
   // position: 'sticky',
   color: lightcoral;
+}
+
+.navitem {
+  padding: 0.5rem;
+  color: var(--gray02) !important;
+
+  :hover {
+    color: var(--teal02) !important;
+  }
 }
