@@ -1,0 +1,32 @@
+#gsapRoot {
+  display: block;
+  margin: 4rem 2rem 0 2rem;
+  padding: 2rem;
+  background-color: var(--gray02);
+  width: 95%;
+  min-height: 100vh;
+}
+
+.gsapSimple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: var(--radius03);
+    background-color: var(--teal01);
+    color: black;
+  }
+  .circle {
+    border-radius: var(--radius02);
+    background-color: var(--indigo01);
+    color: white;
+    margin-left: 2rem;
+  }
+}
